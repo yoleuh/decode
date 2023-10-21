@@ -9,13 +9,21 @@ Here is an example:
 If we have the ASCII value for the letter ‘t’, then that equates to the hex value 0x74,
 which represents the binary value 0111 0100. If we bitwise XOR that value with a key,
 say 0101 0101, then
+
 0111 0100 -> ‘t’
+
 0101 0101 -> XOR with key encryption
+
 0010 0001 -> encrypted value 0x21
+
 If we XOR the encrypted value with the key, we get our ASCII value back.
+
 0010 0001 -> encrypted value 0x21
+
 0101 0101 -> XOR with key decryption
+
 0111 0100 -> ‘t’
+
 The bit stream encryption cipher that your program must decode does a little more than
 this. After encrypting the value, the program adds an alternating bit rotation twist to the
 algorithm. The alternating bit rotation algorithm is such that once you have the
